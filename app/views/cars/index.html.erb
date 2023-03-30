@@ -4,8 +4,8 @@
   </div>
 </div>
 
-<div class="py-5">
-  <div class="row hidden-md-up">
+<div class="container">
+  <div class="row ">
     <% @cars.each do |car| %>
       <div class="col-md-4">
         <div class="card-large mb-2">
@@ -17,7 +17,7 @@
             <% end %>
             <h5 class="card-title "><%= link_to car.brand, car_path(car) %></h5>
             <p class="card-text "><%= car.price_per_day %> €/ jour</p>
-            <%= link_to "Voir le produit", car, class: "rounded-pill btn btn-outline-warning mb-4" %>
+            <%= link_to "Fiche détails", car, class: "rounded-pill btn btn-outline-warning mb-4" %>
           </div>
         </div>
       </div>

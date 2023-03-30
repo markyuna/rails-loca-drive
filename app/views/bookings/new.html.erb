@@ -8,11 +8,11 @@
   <h2 class="text-center">Réserver le model: <strong><%= @car.model %></strong></h2>
   <div class="row">
     <%= simple_form_for [ @car, @booking ] do |f| %>
-      <%= f.input  :starts_at, required: false, label: 'Date de début souhaitée' %>
-      <%= f.input :ends_at, required: false, label: 'Date de fin souhaitée'  %>
+      <%= f.input  :starts_at, required: false, label: 'Date de début souhaitée', as: :date, html5: true, order: [:day, :month, :year] %>
+      <%= f.input :ends_at, required: false, label: 'Date de fin souhaitée', as: :date, html5: true, order: [:day, :month, :year]  %>
       <div class="text-center">
         <%= f.submit "Réserver", class: "btn btn-primary w-50" %><br><hr>
-        <%= link_to "Retour aux produits", cars_path, class: "btn btn-primary"  %>
+        <%= link_to "Retour aux vehicules", cars_path, class: "btn btn-primary"  %>
         <%= link_to "Retour à vos réservation", bookings_path(@booking), class: "btn btn-primary"  %>
       </div>
     <% end %>
