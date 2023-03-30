@@ -7,23 +7,23 @@
   <div class="row">
     <div class="col-md-4">
       <% if @car.photo.attached? %>
-          <%= cl_image_tag @car.photo.key, class: 'card-img-top my_car_image' %>
+          <%= cl_image_tag @car.photo.key, class: 'car_pic' %>
       <% end %>
     </div>
     <div class="col-md-4">
       <div class="card-body">
         <h1 class="brand-inner">Marque: <%= @car.brand %></h1><br>
-        <p class="card-content">Modél: <%= @car.model %></p><br>
-        <p class="card-content">Année de production: <%= @car.year_of_production %></p><br>
-        <p class="card-content">Adresse: <%= @car.address %></p><br>
-        <p class="card-content">Prix: <%= @car.price_per_day %>€/jour </p>
+        <p class="card-content" style="font-size: 20px;">Modél: <%= @car.model %></p><br>
+        <p class="card-content" style="font-size: 20px;">Année de production: <%= @car.year_of_production %></p><br>
+        <p class="card-content" style="font-size: 20px;">Adresse: <%= @car.address %></p><br>
+        <p class="card-content" style="font-size: 20px;">Prix: <%= @car.price_per_day %>€/jour </p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="text-decoration-none text-center">
-    <%= link_to "Louer", "/cars/#{params[:id]}/bookings/new", class: "btn btn-outline-primary" %>
+    <%= link_to "Réserver", "/cars/#{params[:id]}/bookings/new", class: "btn btn-outline-primary" %>
     <%= link_to "Retour aux produits", cars_path, class: "btn btn-outline-primary" %>
 </div>
 <br>

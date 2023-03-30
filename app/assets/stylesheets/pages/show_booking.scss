@@ -1,0 +1,25 @@
+.show_booking {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 16px;
+  padding: 16px;
+  width: fit-content;
+  height: 100%;
+}
+
+.booking-options {
+  margin: 16px auto;
+  .btn {
+    margin-right: 16px;
+  }
+}
+
+.booking_product_pic {
+  width: 60%;
+  margin-top: 0;
+  border-radius: 16px;
+}
+
+.booking_container {
+  margin-top: 38px;
+}

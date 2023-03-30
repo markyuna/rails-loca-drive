@@ -15,12 +15,12 @@
             <% else %>
               <%= image_tag("unknown.jpg", class:"car_pic card-img-top") %>
             <% end %>
-            <p class="card-title">Address: <%= car.address %></p>
-            <p class="card-title"><span class="font-weight-bold">Model:</span> <%= car.model %></p><br>
-            <p class="card-title"><span class="font-weight-bold">Prix ​​total:</span> <%= booking.total_price %> Euros</p>
+            <p class="card-title" style="font-size: 26px;">Address: <%= car.address %></p>
+            <p class="card-title" style="font-size: 26px;"><span class="font-weight-bold">Model:</span> <%= car.model %></p><br>
+            <p class="card-title" style="font-size: 26px;"><span class="font-weight-bold">Prix ​​total:</span> <%= booking.total_price %> Euros</p>
 
             <div class="d-flex justify-content-center link_list">
-              <%= link_to 'Voir', booking, class: "p-2" %> <br>
+              <%= link_to 'Verifier ma location', booking, class: "btn btn-outline-info rounded-pill p-2" %> <br>
             </div>
           </div>
         </div>
