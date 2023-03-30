@@ -5,13 +5,14 @@
 @import "navbar";
 @import "cover";
 @import "cards";
+@import "btn";
 
 .cars-photo {
   margin-bottom: 16px;
 }
 
 .card-img-top.my_car_image {
-  width: 100%;  
+  width: 100%;
   max-width: initial;
 }
 

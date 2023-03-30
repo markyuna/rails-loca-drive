@@ -48,7 +48,7 @@ body {
   grid-column: 1 / -1;
   grid-row: 1;
 
-  font-family: "Prata", serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 6vw;
   width: 100%;
   z-index: 2;
@@ -90,7 +90,6 @@ body {
 .cafe,
 .mozart {
   animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-  // outline: 1px solid red;
 }
 
 .title-inner {
@@ -151,5 +150,3 @@ body {
 body:active * {
   animation: none !important;
 }
-
-
