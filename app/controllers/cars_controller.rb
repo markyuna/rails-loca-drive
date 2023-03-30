@@ -2,6 +2,7 @@ class CarsController < ApplicationController
   before_action :find_car, only: %i[show]
 
   def index
+    sleep 2
     @cars = Car.all
   end
 
