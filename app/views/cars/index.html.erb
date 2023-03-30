@@ -1,16 +1,22 @@
-<div class="widget-list row row-cols-3">
-  <div class="car-cards p-4">
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1 class="display-1 pt-5">Voitures disponibles</h1>
+  </div>
+</div>
+
+<div class="py-5">
+  <div class="row hidden-md-up">
     <% @cars.each do |car| %>
-      <div class="shadow card mb-3 widget">
-        <div class="card-block p-3">
-          <div class="card-body">
+      <div class="col-md-4">
+        <div class="card-large mb-2">
+          <div class="card-block p-3">
             <% if car.photo.attached? %>
-              <%= cl_image_tag car.photo.key, class: 'card-img-top' %>
+              <%= cl_image_tag car.photo.key, class: 'car_pic card-img-top' %>
             <% else %>
-            <%= image_tag("unknown.jpg", class:"card-img-top") %>
+            <%= image_tag("unknown.jpg", class:"car_pic card-img-top") %>
             <% end %>
-            <h5 class="card-title text-center"><%= link_to car.brand, car_path(car) %></h5>
-            <p class="card-text"><%= car.price_per_day %> €/ jour</p>
+            <h5 class="card-title "><%= link_to car.brand, car_path(car) %></h5>
+            <p class="card-text "><%= car.price_per_day %> €/ jour</p>
             <%= link_to "Voir le produit", car, class: "rounded-pill btn btn-outline-warning" %>
           </div>
         </div>

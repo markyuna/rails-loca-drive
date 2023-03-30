@@ -37,7 +37,7 @@
 
 body {
   display: grid;
-  padding: 3vmin;
+  padding: 0;
   background: #e6ded7;
 }
 
@@ -151,3 +151,5 @@ body {
 body:active * {
   animation: none !important;
 }
+
+

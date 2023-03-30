@@ -1,6 +1,3 @@
-<h1>Cars#show</h1>
-<p>Find me in app/views/cars/show.html.erb</p>
-
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center text-white">
    <h1 class="display-1 "><%= @car.brand %></h1>
@@ -8,35 +5,26 @@
 </div>
 <div class="container">
   <div class="row">
-      <div class="col-md-4">
-        <% if @car.photo.attached? %>
-            <%= cl_image_tag @car.photo.key, class: 'card-img-top my_car_image' %>
-        <% end %>
-      </div>
-      <div class="col-md-4">
-        <div class="card-body">
-          <h1 class="brand-inner"><%= @car.brand %></h1><br>
-          <p class="card-content"><%= @car.model %></p><br>
-          <p class="card-content"><%= @car.year_of_production %></p><br>
-          <p class="card-content"><%= @car.address %></p><br>
-          <p class="card-content"><%= @car.price_per_day %>€/jour </p>
-        </div>
-      </div>
     <div class="col-md-4">
-     
+      <% if @car.photo.attached? %>
+          <%= cl_image_tag @car.photo.key, class: 'card-img-top my_car_image' %>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h1 class="brand-inner">Marque: <%= @car.brand %></h1><br>
+        <p class="card-content">Modél: <%= @car.model %></p><br>
+        <p class="card-content">Année de production: <%= @car.year_of_production %></p><br>
+        <p class="card-content">Adresse: <%= @car.address %></p><br>
+        <p class="card-content">Prix: <%= @car.price_per_day %>€/jour </p>
+      </div>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="cards mb-3" >
 
-
-  </div>
-</div>
 <div class="text-decoration-none text-center">
     <%= link_to "Louer", "/cars/#{params[:id]}/bookings/new", class: "btn btn-outline-primary" %>
     <%= link_to "Retour aux produits", cars_path, class: "btn btn-outline-primary" %>
-</div>
 </div>
 <br>
 <br>

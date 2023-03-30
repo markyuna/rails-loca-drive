@@ -1,2 +1,22 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.cars-photo {
+  margin-bottom: 16px;
+}
+
+.card-img-top.my_car_image {
+  width: 100%;
+  max-width: initial;
+}
+
+
+.card-block.p-3 {
+  p {
+    font-size: 16px;
+  }
+}
+
+.card.mb-2 {
+  border-radius: 16px;
+}
