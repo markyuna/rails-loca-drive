@@ -8,6 +8,31 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 70px;
 }
 
+.nav-item {
+  text-decoration-color: rgb(62, 61, 61);
+}
+
+.nav-link {
+  font-size: large;
+  font-weight: bolder;
+  color: rgb(182, 178, 178);
+  transition: 0.8s;
+}
+
+.link_list {
+  font-size: 25px;
+  text-align: left;
+  margin: 0;
+  padding: 5px 0 0 5px;
+  a {
+    text-decoration: none;
+    color: $middle-gray;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $bright-gray;
+  }
+}

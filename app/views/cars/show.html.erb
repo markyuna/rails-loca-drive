@@ -7,22 +7,30 @@
   </div>
 </div>
 <div class="container">
-  <div class="cards mb-3" >
-  <div class="row g-0">
-    <div class="col-md-4">
-      <% if @car.photo.attached? %>
-          <%= cl_image_tag @car.photo.key, class: 'card-img-top my_car_image' %>
-      <% end %>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h1 class="brand-inner"><%= @car.brand %></h1><br>
-        <p class="card-content"><%= @car.model %></p><br>
-        <p class="card-content"><%= @car.year_of_production %></p><br>
-        <p class="card-content"><%= @car.address %></p><br>
-        <p class="card-content"><%= @car.price_per_day %>€/jour </p>
+  <div class="row">
+      <div class="col-md-4">
+        <% if @car.photo.attached? %>
+            <%= cl_image_tag @car.photo.key, class: 'card-img-top my_car_image' %>
+        <% end %>
       </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h1 class="brand-inner"><%= @car.brand %></h1><br>
+          <p class="card-content"><%= @car.model %></p><br>
+          <p class="card-content"><%= @car.year_of_production %></p><br>
+          <p class="card-content"><%= @car.address %></p><br>
+          <p class="card-content"><%= @car.price_per_day %>€/jour </p>
+        </div>
+      </div>
+    <div class="col-md-4">
+     
     </div>
+  </div>
+</div>
+<div class="container">
+  <div class="cards mb-3" >
+
+
   </div>
 </div>
 <div class="text-decoration-none text-center">
@@ -32,4 +40,3 @@
 </div>
 <br>
 <br>
-
