@@ -1,0 +1,23 @@
+<h1>Cars#index</h1>
+<p>Find me in app/views/cars/index.html.erb</p>
+
+<div class="widget-list row row-cols-3">
+  <div class="car-cards p-4">
+    <% @cars.each do |car| %>
+      <div class="shadow card mb-3 widget">
+        <div class="card-block p-3">
+          <div class="card-body">
+            <% if car.photo.attached? %>
+              <%= cl_image_tag car.photo.key, class: 'card-img-top' %>
+            <% else %>
+            <%= image_tag("unknown.jpg", class:"card-img-top") %>
+            <% end %>
+            <h5 class="card-title text-center"><%= link_to car.brand, car_path(car) %></h5>
+            <p class="card-text"><%= car.price_per_day %> €/ jour</p>
+            <%= link_to "Voir le produit", car, class: "rounded-pill btn btn-outline-warning" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

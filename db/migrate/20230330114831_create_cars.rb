@@ -6,6 +6,7 @@ class CreateCars < ActiveRecord::Migration[7.0]
       t.integer :year_of_production
       t.string :address
       t.integer :price_per_day
+      t.string :photo
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
