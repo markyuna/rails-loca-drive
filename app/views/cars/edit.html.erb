@@ -1,11 +1,10 @@
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center text-white">
-    <h1 class="display-1 pt-5">Ajouter une voiture</h1>
+   <h1 class="display-1 pt-5">Ajouter un produits</h1>
   </div>
 </div>
-
-<div class="container p-5">
-  <div class="rental_form shadow p-4">
+<div class="container mb-5">
+  <div class="rental_form p-4">
     <%= simple_form_for [ @car ] do |f| %>
       <%= f.input :brand, required: false, label: 'Marque' %>
       <%= f.input :model, required: false, label: 'Modél' %>
@@ -13,7 +12,7 @@
       <%= f.input :price_per_day, required: false, label: 'Prix par jour' %>
       <%= f.input :year_of_production, required: false, label: 'Anée de production' %>
       <%= f.input :photo, as: :file %>
-      <%= f.submit "Ajouter", class: "btn btn-outline-primary btn-lg mb-5" %>
+      <%= f.submit "Modifier", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
