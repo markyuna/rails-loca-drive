@@ -1,8 +1,8 @@
 <div class="container mt-5" style="width: 30rem;">
   <div class=" form-login shadow rounded-4 p-5">
-    <h2 class="text-center">Me connecter</h2>
+    <h2 class="text-white text-center">Me connecter</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-      <div class="form-inputs">
+      <div class="form-inputs text-white">
         <%= f.input :email,
                     required: false,
                     autofocus: true,
@@ -13,9 +13,10 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
       <div class="form-actions">
-        <%= f.button :submit, "Connexion", class: 'btn-primary text-decoration-none' %>
+        <%= f.button :submit, "Connexion", class: 'btn-outline-primary text-decoration-none' %>
       </div>
     <% end %>
+    <br>
     <%= render "devise/shared/links" %>
   </div>
 </div>

@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user
-  before_action :set_booking, only: %i[show]
+  before_action :set_booking, only: %i[show destroy]
   before_action :set_car, only: %i[new create]
 
   def index
@@ -24,6 +24,12 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to booking_path(@car, @booking)
+
   end
 
 

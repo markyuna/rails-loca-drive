@@ -1,19 +1,19 @@
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center text-white">
-    <h1 class="display-1 pt-5">Faire une réservation pour <%= @car.brand %></h1>
+    <h3 class="display-1 pt-5">Faire une réservation pour <%= @car.brand %></h3>
   </div>
 </div>
 
-<div class="container d-flex flex-column p-4 mb-4 shadow w-50 mx-auto">
-  <h2 class="text-center">Réserver le model: <strong><%= @car.model %></strong></h2>
-  <div class="row">
+<div class="container d-flex flex-column p-4 mb-4 shadow w-50 mx-auto rental_form">
+  <p class="card-text text-center">Réserver le model: <strong><%= @car.model %></strong></p>
+  <div class="row card-text">
     <%= simple_form_for [ @car, @booking ] do |f| %>
       <%= f.input  :starts_at, required: false, label: 'Date de début souhaitée', as: :date, html5: true, order: [:day, :month, :year] %>
       <%= f.input :ends_at, required: false, label: 'Date de fin souhaitée', as: :date, html5: true, order: [:day, :month, :year]  %>
       <div class="text-center">
-        <%= f.submit "Réserver", class: "btn btn-primary w-50" %><br><hr>
-        <%= link_to "Retour aux vehicules", cars_path, class: "btn btn-primary"  %>
-        <%= link_to "Retour à vos réservation", bookings_path(@booking), class: "btn btn-primary"  %>
+        <%= f.submit "Réserver", class: "btn btn-outline-primary btn-lg w-50" %><br><hr>
+        <%= link_to "Retour aux vehicules", cars_path, class: "btn btn-outline-primary btn-lg"  %>
+        <%= link_to "Retour à vos réservation", bookings_path(@booking), class: "btn btn-outline-primary btn-lg"  %>
       </div>
     <% end %>
   </div>

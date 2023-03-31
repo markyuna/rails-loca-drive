@@ -1,0 +1,99 @@
+.shadow-container{
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.card-wrapper{
+  display: flex;
+  justify-content: center;
+  // padding-top: 20px;
+  // column-gap: 8px;
+}
+
+.card {
+  width: 290px;
+  border-radius: 25px;
+  background-color: #fff;
+  transition: all 0.4s ease;
+}
+
+.card:hover{
+  transform: translateY(-15px);
+}
+
+.card-header,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+  .button{
+    width: 25px;
+    height: 25px;
+    margin-top: 3px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-right: -5.5em;
+  }
+}
+
+.card-header{
+  position: relative;
+  row-gap: 5px;
+}
+.overlay{
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.card-title {
+  position: relative;
+}
+.card-body {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
+.widget-list {
+  background: transparent;
+}
+
+.widget {
+  margin: 0.6rem;
+  background: white;
+  text-align: center;
+}
+
+/* extension */
+html.sr .widget {
+  visibility: hidden;
+}
+
+.my_cars_container {
+  hr {
+    border-top: 1px solid #887048;
+    width: 100%;
+  }
+  .add_new_car {
+    margin-top: 16px;
+  }
+  img {
+    width: 200px;
+  }
+}
+
+
+
+.bin {
+  margin-left: 32px;
+  font-size: 32px;
+}

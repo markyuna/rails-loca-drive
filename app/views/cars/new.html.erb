@@ -1,0 +1,19 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1 class="display-1 pt-5">Ajouter une voiture</h1>
+  </div>
+</div>
+
+<div class="container p-5">
+  <div class="rental_form shadow p-4">
+    <%= simple_form_for [ @car ] do |f| %>
+      <%= f.input :brand, required: false %>
+      <%= f.input :model, required: false %>
+      <%= f.input :address, required: false %>
+      <%= f.input :price_per_day, required: false %>
+      <%= f.input :year_of_production, required: false %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Ajouter", class: "btn btn-outline-primary btn-lg mb-5" %>
+    <% end %>
+  </div>
+</div>

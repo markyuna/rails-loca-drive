@@ -5,13 +5,13 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container mb-5">
   <div class="row booking_container">
     <div class="col-6">
       <% if car.photo.key.present? %>
-        <%= cl_image_tag car.photo.key, crop: :fill, class:"booking_product_pic" %>
+        <%= cl_image_tag car.photo.key, crop: :fill, class:"booking_product_pic mx-auto" %>
       <% else %>
-        <%= image_tag("unknown.jpg", class:"booking_product_pic") %>
+        <%= image_tag("unknown.jpg", class:"booking_product_pic mx-auto") %>
       <% end %>
     </div>
     <div class="show_booking col-4">
@@ -21,7 +21,7 @@
       <p style="font-size: 26px;"><span class="font-weight-bold">Jusqu'au: </span><%= @booking.ends_at.strftime("%e-%m-%Y")  %></p>
       <p style="font-size: 26px;"><span class="font-weight-bold">Addresse: </span><%= car.address  %></p>
       <p style="font-size: 26px;"><span class="font-weight-bold">Total Price: </span><%= @booking.total_price %> Euros.</p>
-    <%= link_to 'Retour à vos réservations', bookings_path, class: "btn btn-primary" %>
+    <%= link_to 'Retour à vos réservations', bookings_path, class: "btn btn-warning btn-lg mb-2" %>
     </div>
   </div>
 </div>

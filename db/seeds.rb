@@ -50,11 +50,39 @@ car_sets = [
     address: '60 rue du roi de sicile 75004',
     price_per_day: 63,
     user: users
+  },
+  { brand: 'Toyota',
+    model: 'Toyota Yaris Hybride',
+    year_of_production: 2023,
+    address: "59 bis rue jouffroy d'abbans 75017",
+    price_per_day: 83,
+    user: users
+  },
+  { brand: 'Morgan',
+    model: 'Plus Six',
+    year_of_production: 2023,
+    address: "21 rue blondel 75002",
+    price_per_day: 75,
+    user: users
+  },
+  { brand: 'Aston Martin',
+    model: 'Aston Martin DB11',
+    year_of_production: 2023,
+    address: "28 rue jean de la fontaine 75016",
+    price_per_day: 92,
+    user: users
+  },
+  { brand: 'Tesla',
+    model: 'Model X Plaid',
+    year_of_production: 2023,
+    address: "5 Av. Anatole France 75007",
+    price_per_day: 92,
+    user: users
   }
 
 ]
 
-car_photos = ['voiture_1.jpg', 'mercedesbenz.jpg', 'renault.jpg', 'toyota.jpg']
+car_photos = ['voiture_1.jpg', 'mercedesbenz.jpg', 'renault.jpg', 'toyota.jpg', 'yaris.jpg', 'morgan.jpg', 'aston.jpg', 'tesla.jpg']
 
 puts 'creating cars'
 

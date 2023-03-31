@@ -20,8 +20,8 @@
             <p class="card-title" style="font-size: 26px;"><span class="font-weight-bold">Model:</span> <%= car.model %></p><br>
             <p class="card-title" style="font-size: 26px;"><span class="font-weight-bold">Prix ​​total:</span> <%= booking.total_price %> Euros</p>
 
-            <div class="d-flex justify-content-center link_list">
-              <%= link_to 'Verifier ma location', booking, class: "btn btn-info rounded-pill p-2" %> <br>
+            <div class="d-flex justify-content-center">
+              <%= link_to 'Verifier ma location', booking, class: "btn btn-outline-warning btn-lg p-2" %> <br>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@
   </div>
   <div class="row">
     <div class="text-center">
-      <%= link_to "Retour aux vehicules", cars_path, class:"btn btn-primary" %>
+      <%= link_to "Retour aux vehicules", cars_path, class:"btn btn-outline-primary btn-lg mb-5" %>
     </div>
   </div>
 </div>

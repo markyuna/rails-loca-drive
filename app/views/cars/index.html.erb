@@ -15,9 +15,9 @@
             <% else %>
             <%= image_tag("unknown.jpg", class:"car_pic card-img-top") %>
             <% end %>
-            <h5 class="card-title "><%= link_to car.brand, car_path(car) %></h5>
+            <h5 class="card-title"><%= link_to car.brand, car_path(car) %></h5>
             <p class="card-text "><%= car.price_per_day %> €/ jour</p>
-            <%= link_to "Fiche détails", car, class: "rounded-pill btn btn-outline-warning mb-4" %>
+            <%= link_to "Fiche détails", car, class:"btn btn-warning btn-lg mb-4" %>
           </div>
         </div>
       </div>

@@ -1,0 +1,38 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1 class="display-1">Mes voitures</h1>
+  </div>
+</div>
+<div class="card-wrapper">
+  <div class="my_cars_container p-4">
+    <div class="widget-list row row-cols-3">
+      <% unless current_user.cars.nil? %>
+        <% @cars.each do |car|%>
+          <div class="shadow card mb-3 widget">
+            <div class="card-header bg-transparent " >
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                <%= link_to car.brand, car_path(car) %>
+                </li>
+                <li class="list-inline-item">
+                <%= button_to'╳', car_path(car), method: :delete, data: {turbo_method: :delete}, class:"button" %>
+                </li>
+              </ul>
+            </div>
+              <div class="card-body">
+                <% if car.photo.key.present? %>
+                <%= cl_image_tag(car.photo.key, class:"") %>
+                <% else %>
+                  <%= image_tag("unknown.jpg", class:"") %>
+                <% end %>
+                <p><%= car.address %></p>
+              </div>
+            <div class="card-footer bg-transparent">
+              <%= link_to 'Modifier le produit', edit_car_path(car), class:"" %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
