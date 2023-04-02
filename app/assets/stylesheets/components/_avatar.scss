@@ -23,7 +23,7 @@
 }
 }
 /* Styles pour les écrans de taille moyenne et grande */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 400px) {
   .avatar-large {
     width: auto;
   }
@@ -34,7 +34,7 @@
   }
 
   .logo {
-    padding-left: 15px;
+    padding-left: 10px;
     width: 10px;
   }
 }
