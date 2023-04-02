@@ -4,7 +4,7 @@
   border-radius: 50%;
 }
 .avatar-large {
-  width: 66px;
+  width: 30px;
   border-radius: 60%;
 }
 .avatar-bordered {
@@ -38,12 +38,6 @@
 
   .logo {
     padding-left: 15px;
-    width: auto;
-  }
-}
-
-@media only screen and (min-width: 400px) {
-  .logo {
-    width: auto;
+    width: 40px;
   }
 }
