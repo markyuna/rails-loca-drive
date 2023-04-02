@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index]
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :find_user, :database_search
   before_action :find_car, only: %i[show edit update destroy]
 
