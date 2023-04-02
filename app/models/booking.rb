@@ -3,8 +3,7 @@ class Booking < ApplicationRecord
   belongs_to :car
 
   validates :starts_at, :ends_at, presence: true
-
-
+  validates :total_price, presence: true
   # before_destroy :destroy_user_bookings
   before_save :calculate_total_price
 

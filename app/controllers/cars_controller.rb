@@ -6,7 +6,7 @@ class CarsController < ApplicationController
   def index
     @cars = Car.all
     if params[:query].present?
-      @cars = Car.search_by_address(params[:query])
+      @cars = Car.search_by_city_and_address(params[:query])
     else
       @cars = Car.all
     end
@@ -60,7 +60,7 @@ class CarsController < ApplicationController
 
   def search
     if params[:query].present?
-      @cars = Car.search_by_address(params[:query])
+      @cars = Car.search_by_city_and_address(params[:query])
     else
       @cars = Car.all
     end
@@ -71,7 +71,7 @@ class CarsController < ApplicationController
       {
         lat: car.latitude,
         lng: car.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { car: car }),
+        info_window_html: render_to_string(partial: "info_window", locals: { car: car }),
         marker_html: render_to_string(partial: "marker", locals: {car: car})
       }
     end
@@ -88,7 +88,7 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit(:brand, :model, :address, :year_of_productionion, :price_per_day, :photo)
+    params.require(:car).permit(:brand, :model, :address, :city, :year_of_productionion, :price_per_day, :photo)
   end
 
   def database_search

@@ -9,4 +9,10 @@ class Car < ApplicationRecord
   validates :brand, :model, :address, presence: true
   validates :price_per_day, numericality: { greater_than: 0 }
 
+  include PgSearch::Model
+  pg_search_scope :search_by_city_address,
+    against: [ :city, :address ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 end

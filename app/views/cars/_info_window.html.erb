@@ -6,7 +6,7 @@
   <% end %>
   <div class="map-card">
     <p><span class="font-weight-bold" ><i class="fa fa-user"></i></span>  <%= car.brand %></p>
-    <p><span class="font-weight-bold" ><i class="fa fa-location-arrow"></i></span>  <%= car.address %></p>
+    <p><span class="font-weight-bold" ><i class="fa fa-location-arrow"></i></span>  <%= car.address %><strong><%= car.city %></strong></p>
     <p>€/day <span class="font-weight-bold"><%= car.price_per_day %></span></p>
   </div>
 <% end %>
