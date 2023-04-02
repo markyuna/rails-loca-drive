@@ -7,14 +7,14 @@
 
 <div class="container mb-5">
   <div class="row booking_container">
-    <div class="col-6">
+    <div class="col-4">
       <% if car.photo.key.present? %>
         <%= cl_image_tag car.photo.key, crop: :fill, class:"booking_product_pic mx-auto" %>
       <% else %>
         <%= image_tag("unknown.jpg", class:"booking_product_pic mx-auto") %>
       <% end %>
     </div>
-    <div class="show_booking col-4">
+    <div class="show_booking col-6">
       <p style="font-size: 26px;"><span class="font-weight-bold">Marque: </span><%= car.brand  %></p>
       <p style="font-size: 26px;"><span class="font-weight-bold">Modél: </span><%= car.model  %></p>
       <p style="font-size: 26px;"><span class="font-weight-bold">A partir de: </span><%= @booking.starts_at.strftime("%e-%m-%Y")  %></p>

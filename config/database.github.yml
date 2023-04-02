@@ -5,4 +5,4 @@ test:
   port: 5432
   username: postgres
   password: postgres
-  database: rails_rent_cars_challenge_test
+  database: rails_loca_drive_challenge_test

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     collection do
       get :search
     end
+
+    resources :bookings, only: %i[new create destroy]
   end
 
   resources :bookings, except: %i[new index create]
