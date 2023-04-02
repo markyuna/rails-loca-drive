@@ -2,11 +2,11 @@
   <% if car.photo.key.nil? %>
     <%= image_tag "no-image.png", class:"img-fluid width: 100% height: auto" %>
   <% else %>
-    <%= cl_image_tag car.photo.key, crop: :fill, class:"img-fluid width: 100% height: auto" %>
+    <%= cl_image_tag car.photo.key, crop: :fill, class:"img-fluid width: 50% height: auto" %>
   <% end %>
   <div class="map-card">
     <p><span class="font-weight-bold" ><i class="fa fa-user"></i></span>  <%= car.brand %></p>
-    <p><span class="font-weight-bold" ><i class="fa fa-location-arrow"></i></span>  <%= car.address %><strong><%= car.city %></strong></p>
-    <p>€/day <span class="font-weight-bold"><%= car.price_per_day %></span></p>
+    <p><span class="font-weight-bold" ><i class="fa fa-location-arrow"></i></span><%= car.address %></p>
+    <p><span class="font-weight-bold"><%= car.price_per_day %>€/Jour </span></p>
   </div>
 <% end %>
