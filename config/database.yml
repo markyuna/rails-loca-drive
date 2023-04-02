@@ -83,4 +83,4 @@ production:
   <<: *default
   database: rails_loca_drive_production
   username: rails_loca_drive
-  password: <%= ENV["RAILS_loca_drive_DATABASE_PASSWORD"] %>
+  password: <%= ENV["RAILS_LOCA_DRIVE_DATABASE_PASSWORD"] %>
