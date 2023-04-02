@@ -102,4 +102,4 @@ car_sets.each_with_index do |car_set, index|
   puts 'photo attached'
   product.save!
 end
-puts 'car created'
+puts 'cars created'

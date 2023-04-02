@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   resources :cars do
     resources :bookings, only: %i[new create destroy]
+
+    collection do
+      get :search
+    end
   end
 
   resources :bookings, except: %i[new index create]
