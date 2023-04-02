@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index]
   before_action :find_user, :database_search
   before_action :find_car, only: %i[show edit update destroy]
 
@@ -60,7 +60,7 @@ class CarsController < ApplicationController
 
   def search
     if params[:query].present?
-      @cars = Car.search_by_city_and_address(params[:query])
+      @cars = Car.search_by_city_address(params[:query])
     else
       @cars = Car.all
     end

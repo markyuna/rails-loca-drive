@@ -7,7 +7,6 @@ class Car < ApplicationRecord
   has_one_attached :photo
 
   validates :brand, :model, :address, presence: true
-  validates :city, presence: true
   validates :price_per_day, numericality: { greater_than: 0 }
 
   include PgSearch::Model
