@@ -17,7 +17,7 @@
 }
 // Source mixin
 @mixin make-container($padding-x: $container-padding-x) {
-  width: 100%;
+  width: 90%;
   padding-right: $padding-x;
   padding-left: $padding-x;
   margin-right: auto;
