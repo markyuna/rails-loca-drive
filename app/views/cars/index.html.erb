@@ -4,23 +4,30 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row ">
-    <% @cars.each do |car| %>
-      <div class="col-md-4">
-        <div class="card-large mb-2">
-          <div class="shadow card-block">
-            <% if car.photo.attached? %>
-              <%= cl_image_tag car.photo.key, class: 'car_pic card-img-top' %>
-            <% else %>
-            <%= image_tag("unknown.jpg", class:"car_pic card-img-top") %>
-            <% end %>
-            <h5 class="card-title"><%= link_to car.brand, car_path(car) %></h5>
-            <p class="card-text "><%= car.price_per_day %> €/ jour</p>
-            <%= link_to "Fiche détails", car, class:"btn btn-warning btn-lg mb-4" %>
+<div class="px-5 cars-map-grid">
+    <div id='map' style='width: 100%;'
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  <div class="widget-list row row-cols-3">
+    <div class="car-cards p-4">
+      <% @cars.each do |car| %>
+        <div class="shadow card mb-3 widget">
+          <div class="card-block p-3">
+            <div class="card-body">
+              <% if car.photo.attached? %>
+                <%= cl_image_tag car.photo.key, class: 'car_pic card-img-top' %>
+              <% else %>
+              <%= image_tag("unknown.jpg", class:"car_pic card-img-top") %>
+              <% end %>
+              <h5 class="card-title"><%= link_to car.brand, car_path(car) %></h5>
+              <p class="card-text "><%= car.price_per_day %> €/ jour</p>
+              <%= link_to "Fiche détails", car, class:"btn btn-warning btn-lg mb-4" %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

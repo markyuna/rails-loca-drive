@@ -62,6 +62,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_133449) do
     t.string "address"
     t.integer "price_per_day"
     t.string "photo"
+    t.float "latitude"
+    t.float "longitude"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

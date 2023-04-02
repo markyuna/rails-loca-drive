@@ -1,0 +1,32 @@
+<% @search_colon = @query.present? ? ":" : ""  %>
+<% @search_text =  @count > 1 || @count == 0 ? "stays" : "stay" %>
+<h1 class="text-center">All Available cars</h1>
+<h3 class="text-center"><%= @query.capitalize %> <%= @search_colon %> <%= @count %> <%=@search_text %> found </h3>
+<div class="px-5 cars-map-grid">
+    <div id='map' style='width: 100%;'
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  <div class="product-cards">
+    <% @cars.each do |car| %>
+    <div>
+      <div class="card mb-2">
+        <div class="card-block p-3">
+          <div class="cars-photo">
+            <% if car.photo.key.present? %>
+              <%= cl_image_tag car.photo.key, class:"card-img-top search-image " %>
+            <% else %>
+            <%= image_tag("unknown.jpg", class:"card-img-top search-image") %>
+            <% end %>
+          </div>
+          <strong><p class="card-title"><%= car.address %></p></strong>
+          <p class="card-subtitle text-muted"><span class="font-weight-bold">Price:</span> <%= car.price_per_day %> Euros</p>
+            <%= link_to 'Check it out!', car, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<h1><%= link_to "Go back to home page", root_path, class: "btn btn-primary" %></h1>

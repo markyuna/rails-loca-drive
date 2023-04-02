@@ -1,0 +1,25 @@
+@media only screen and (min-width: 564px) {
+  .cars-map-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .car-cards {
+    display: grid;
+    grid-gap: 10px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cars-map-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+  }
+  .car-cards {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+  }
+}

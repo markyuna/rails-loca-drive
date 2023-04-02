@@ -1,8 +1,23 @@
 class CarsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :find_user, :database_search
   before_action :find_car, only: %i[show edit update destroy]
 
   def index
     @cars = Car.all
+    if params[:query].present?
+      @cars = Car.search_by_address(params[:query])
+    else
+      @cars = Car.all
+    end
+      @markers = @cars.geocoded.map do |car|
+      {
+        lat: car.latitude,
+        lng: car.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { car: car }),
+        marker_html: render_to_string(partial: "marker", locals: {car: car})
+      }
+    end
   end
 
   def new
@@ -43,6 +58,25 @@ class CarsController < ApplicationController
     @bookings = @cars.map {|p| p.bookings}.flatten
   end
 
+  def search
+    if params[:query].present?
+      @cars = Car.search_by_address(params[:query])
+    else
+      @cars = Car.all
+    end
+    @count = @cars.count
+    @query = params[:query]
+
+    @markers = @cars.geocoded.map do |car|
+      {
+        lat: car.latitude,
+        lng: car.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { car: car }),
+        marker_html: render_to_string(partial: "marker", locals: {car: car})
+      }
+    end
+  end
+
   private
 
   def find_user
@@ -54,6 +88,10 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit(:brand, :model, :address, :year_of_production, :price_per_day, :photo)
+    params.require(:car).permit(:brand, :model, :address, :year_of_productionion, :price_per_day, :photo)
+  end
+
+  def database_search
+    @markers = Car.all
   end
 end
