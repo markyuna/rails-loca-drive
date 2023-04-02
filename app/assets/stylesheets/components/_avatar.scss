@@ -1,4 +1,4 @@
-@media only screen and (min-width: 400px) {
+
 .avatar {
   width: 40px;
   border-radius: 50%;
@@ -22,7 +22,7 @@
 }
 
 /* Styles pour les écrans de taille moyenne et grande */
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 900px) {
   .avatar {
     width: 60px;
   }
@@ -38,23 +38,12 @@
 
   .logo {
     padding-left: 15px;
-    width: 100%;
-  }
-
-  .sign-in {
-    width: 70px;
-    height: 70px;
+    width: 50%;
   }
 }
 
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 400px) {
   .logo {
     width: auto;
   }
-
-  .sign-in {
-    width: 80px;
-    height: 80px;
-  }
-}
 }
