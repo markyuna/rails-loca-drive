@@ -60,6 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_133449) do
     t.string "model"
     t.integer "year_of_production"
     t.string "address"
+    t.string "city"
     t.integer "price_per_day"
     t.string "photo"
     t.float "latitude"

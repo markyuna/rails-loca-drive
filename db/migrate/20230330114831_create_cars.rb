@@ -5,6 +5,7 @@ class CreateCars < ActiveRecord::Migration[7.0]
       t.string :model
       t.integer :year_of_production
       t.string :address
+      t.string :city
       t.integer :price_per_day
       t.string :photo
       t.float :latitude

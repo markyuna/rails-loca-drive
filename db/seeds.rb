@@ -27,6 +27,7 @@ car_sets = [
     model: 'Daytona SP3',
     year_of_production: 2021,
     address: '47 rue berger 75001',
+    city: 'Paris',
     price_per_day: 54,
     user: users
   },
@@ -34,6 +35,7 @@ car_sets = [
     model: 'Mercedes-Benz GLA',
     year_of_production: 2022,
     address: '16 rue du pont neuf 75001',
+    city: 'Paris',
     price_per_day: 64,
     user: users
   },
@@ -41,6 +43,7 @@ car_sets = [
     model: 'Twingo',
     year_of_production: 2022,
     address: '9 rue mansart 75009',
+    city: 'Paris',
     price_per_day: 44,
     user: users
   },
@@ -48,6 +51,7 @@ car_sets = [
     model: 'Toyota Corolla',
     year_of_production: 2023,
     address: '60 rue du roi de sicile 75004',
+    city: 'Paris',
     price_per_day: 63,
     user: users
   },
@@ -55,6 +59,7 @@ car_sets = [
     model: 'Toyota Yaris Hybride',
     year_of_production: 2023,
     address: "59 bis rue jouffroy d'abbans 75017",
+    city: 'Paris',
     price_per_day: 83,
     user: users
   },
@@ -62,6 +67,7 @@ car_sets = [
     model: 'Plus Six',
     year_of_production: 2023,
     address: "21 rue blondel 75002",
+    city: 'Paris',
     price_per_day: 75,
     user: users
   },
@@ -69,6 +75,7 @@ car_sets = [
     model: 'Aston Martin DB11',
     year_of_production: 2023,
     address: "28 rue jean de la fontaine 75016",
+    city: 'Paris',
     price_per_day: 92,
     user: users
   },
@@ -76,6 +83,7 @@ car_sets = [
     model: 'Model X Plaid',
     year_of_production: 2023,
     address: "5 Av. Anatole France 75007",
+    city: 'Paris',
     price_per_day: 92,
     user: users
   }
