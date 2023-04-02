@@ -1,3 +1,4 @@
+@media only screen and (min-width: 400px) {
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -35,4 +36,5 @@
     text-decoration: none;
     color: $bright-gray;
   }
+}
 }
