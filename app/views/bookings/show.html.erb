@@ -9,9 +9,9 @@
   <div class="row booking_container">
     <div class="col-4">
       <% if car.photo.key.present? %>
-        <%= cl_image_tag car.photo.key, crop: :fill, class:"booking_product_pic mx-auto" %>
+        <%= cl_image_tag car.photo.key, crop: :fill, class:"booking_car_pic mx-auto" %>
       <% else %>
-        <%= image_tag("unknown.jpg", class:"booking_product_pic mx-auto") %>
+        <%= image_tag("unknown.jpg", class:"booking_car_pic mx-auto") %>
       <% end %>
     </div>
     <div class="show_booking col-6">

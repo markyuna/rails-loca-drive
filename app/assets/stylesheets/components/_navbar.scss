@@ -1,19 +1,31 @@
-@media only screen and (min-width: 250px) {
+@media only screen and (min-width: 390px) {
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  font-size: large;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  color: white;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: auto;
+  color: white;
 }
 
 .nav-item {
   text-decoration-color: rgb(62, 61, 61);
+}
+
+.navbar{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 }
 
 .nav-link {
@@ -30,11 +42,11 @@
   padding: 5px 0 0 5px;
   a {
     text-decoration: none;
-    color: $middle-gray;
+    color: white;
+
   }
   a:hover {
     text-decoration: none;
-    color: $bright-gray;
+    color: grey;
   }
-}
 }

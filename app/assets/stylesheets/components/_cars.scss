@@ -1,25 +1,26 @@
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 390px) {
   .cars-map-grid {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
   }
   .car-cards {
     display: grid;
-    grid-gap: 10px;
-    align-items: center;
+    grid-gap: 20px;
+    // align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media only screen and (max-width: 900px) {
   .cars-map-grid {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: 1fr;
+    justify-items: center;
   }
   .car-cards {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: 1fr;
   }
 }
